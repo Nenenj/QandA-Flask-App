@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A Session</title>
+</head>
+<body>
+    <h1>Q&A Session</h1>
+    <form action="/qanda" method="post">
+        {% for question, answer in qa_pairs %}
+            <p>{{ question }} <input type="text" name="answer"></p>
+            <input type="hidden" name="question" value="{{ question }}">
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

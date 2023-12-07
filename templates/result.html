@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A Result</title>
+</head>
+<body>
+    <h1>Q&A Result</h1>
+    {% if correct %}
+        <p>Correct! Your answer: {{ answer }}</p>
+    {% else %}
+        <p>Wrong! The correct answer is {{ answer }}</p>
+    {% endif %}
+    <a href="/">Go back</a>
+</body>
+</html>
